@@ -1,1 +1,30 @@
-a
+-Modelagem - 'desenho'
+  -Conceitual: nível abstrato com entidades, atributos, relacionamentos e cardionalidades
+    -Interação com cliente
+    -Geração de documentação
+  -Lógico: nível de programação, foco nas chaves estrangeiras
+  -Físico: nível de SGBD e tecnologia
+
+-Conceitos
+  -BD vs SGBD: estrutura de armazenamento vs conjunto de serviços para o BD
+    -Serviços do SGBD:
+      -Garantir integridade do banco
+      -Garantir transações
+      -Garantir backup
+
+-Sistema Computacional
+      -Sistema de indormação: doco no relatório
+      -Sistema de conhecimento: foco no reconhecimento de padrões
+        -Armazenar mais atributos
+        -Evitar dados nulos
+
+-Partes ou elementos de um sistema
+  -Partes ou aspectos estruturais
+    -BD
+  -Partes ou aspectos funcionais
+    -Funcionalidades ou finalidades do sistema
+
+-Estudo de cardinalidade
+  -1 para N: chave estrangeira vai para a tabela / entidade do N
+  -N para N: cria-se uma terceira tabela e as chaves estrangeiras vão para lá
+  -1 para 1: chave estrangeira vai ou visita qualquer tabela
