@@ -1,0 +1,52 @@
+create schema ufn_db;
+use ufn_db;
+show tables;
+
+CREATE TABLE curso (
+
+    id_curso INT PRIMARY KEY not null,
+    descricao VARCHAR(50) not null
+);
+
+select *
+from curso;
+
+CREATE TABLE Aluno (
+	
+    id_aluno INT PRIMARY KEY not null,
+    nome VARCHAR(50),
+    id_curso INT,
+	CONSTRAINT fk_curso FOREIGN KEY (id_curso) REFERENCES Curso(id_curso)
+);
+
+CREATE TABLE Disciplina (
+	
+    id_disciplina INT PRIMARY KEY not null,
+    nome VARCHAR(50)
+);
+    
+select *
+from disciplina;
+
+CREATE TABLE Turma (
+	
+    id_turma INT PRIMARY KEY not null,
+    ano_semestre VARCHAR (50),
+    id_disciplina INT,
+    CONSTRAINT fk_disciplina FOREIGN KEY (id_disciplina) REFERENCES Disciplina(id_disciplina)
+);
+
+select *
+from aluno, turma;
+
+CREATE TABLE Matricula (
+
+	id_matricula INT PRIMARY KEY not null,
+    id_aluno INT,
+	CONSTRAINT fk_aluno FOREIGN KEY (id_aluno) REFERENCES Aluno(id_aluno),
+    id_turma INT,
+    CONSTRAINT fk_turma FOREIGN KEY (id_turma) REFERENCES Turma(id_turma)
+);
+
+
+    
